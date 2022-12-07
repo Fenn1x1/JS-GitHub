@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<form>
+    <p>Логин <input id="" name="login" type="text" onkeyup="check('login', reg_login)" style="outline: none;"></p>
+    <p>Имя <input id="name" name="name" type="text" onkeyup="check('name', reg_name)" style="outline: none;"></p>
+    <p>Дата <input id="date" name="date" type="text" onkeyup="check('date',reg_date)" style="outline: none;"></p>
+    <p>Пароль <input id="pass" name="pass" type="text" onkeyup="check('pass', reg_pass)" style="outline: none;"></p>
+</form>
+<script>
+    
+let reg_login = /^[a-z_-]{3,10}$/i;
+let reg_name = /^[а-яё]{3,10}$/i;
+let reg_date = /^(19[0-9][0-9]|20[0-9][0-9])-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/
+let reg_pass = /^[\w\.+*_-]{6,20}$/i
+function check(id, reg){
+    let st = document.getElementById(id);
+    let v = document.getElementById(id).value;
+
+    if (reg.test(v)) {
+        st.style.border = '1px solid green';
+        return true;
+    }
+    else {
+        st.style.border = '1px solid red'
+        return false;
+    }
+}
+</script>
+<script src="script.js"></script>
+</body>
+
+</html>
