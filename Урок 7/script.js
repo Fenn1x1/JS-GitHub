@@ -184,11 +184,11 @@ do {
 } while (true); */
 
 
-let st2 = "Я учу JavaScript. Я его не понимаю.";
+/* let st2 = "Я учу JavaScript. Я его не понимаю.";
 
 st = st.concat(st2);
 document.write(st + "<br>")
 
 document.write(st.split(".") + "<br>");
 console.log(st)
-console.log(st.split(' '));
+console.log(st.split(' ')); */

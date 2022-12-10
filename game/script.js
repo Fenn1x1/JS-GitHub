@@ -10,6 +10,7 @@ gameTime.addEventListener("input", setGameTime)
 let score = 0
 let time = document.querySelector("#time")
 let isGameStarted = false
+let createcolor
 
 function startGame() {
     score = 0
@@ -73,6 +74,10 @@ function renderBox() {
     box.style.cursor = "pointer"
     box.setAttribute("data-box", "true")
     game.insertAdjacentElement("afterbegin", box)
+    let red = getRandom(0, 255);
+    let green = getRandom(0, 255);
+    let blue = getRandom(0, 255);
+   box.style.backgroundColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
 }
 
 function handleBoxClick(event) {
@@ -85,4 +90,5 @@ function handleBoxClick(event) {
         score++;
         renderBox()
     }
+    
 }
