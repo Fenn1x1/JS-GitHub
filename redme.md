@@ -1,2 +1,2 @@
-# Git and GitHub
+# Git and GitHub/ У меня получилось
 ## Первый репозиторий
